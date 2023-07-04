@@ -117,7 +117,7 @@ class Renderer:
             self._end_event.record(torch.cuda.current_stream(self._device))
         if 'image' in res:
             res.image = self.to_cpu(res.image).detach().numpy()
-            res.image = add_watermark_np(res.image, 'AI Generated')
+            # res.image = add_watermark_np(res.image, 'AI Generated')
         if 'stats' in res:
             res.stats = self.to_cpu(res.stats).detach().numpy()
         if 'error' in res:
